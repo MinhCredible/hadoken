@@ -29,6 +29,25 @@ $(document).ready(function(){
 		this.src = 'img/ryuStill.png';
 	});
 
+	var cool = document.getElementsByClassName('cool')[0];
+	var ryu = document.getElementsByClassName('ryu')[0];
+
+	$('body').on('keydown', function(event){
+		if (event.which == 88) {
+			cool.style.visibility = 'visible';
+			ryu.style.visibility = 'hidden';
+		};
+	});
+	$('body').on('keyup', function(event){
+		if (event.which == 88) {
+			cool.style.visibility = 'hidden';
+			ryu.style.visibility = 'visible';
+		};
+	});
+
+
+	
+
 	function playHadouken () {
 		$('.ryu-sound')[0],volume = 0.5;
 		$('.ryu-sound')[0].load();
